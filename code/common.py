@@ -45,42 +45,6 @@ def init(X: np.ndarray, K: int,
     return mixture, post
 
 
-def plot(X: np.ndarray, mixture: GaussianMixture, post: np.ndarray,
-         title: str):
-    """Plots the mixture model for 2D data"""
-    _, K = post.shape
-
-    percent = post / post.sum(axis=1).reshape(-1, 1)
-    fig, ax = plt.subplots()
-    ax.title.set_text(title)
-    ax.set_xlim((-20, 20))
-    ax.set_ylim((-20, 20))
-    r = 0.25
-    color = ["r", "b", "k", "y", "m", "c"]
-    for i, point in enumerate(X):
-        theta = 0
-        for j in range(K):
-            offset = percent[i, j] * 360
-            arc = Arc(point,
-                      r,
-                      r,
-                      0,
-                      theta,
-                      theta + offset,
-                      edgecolor=color[j])
-            ax.add_patch(arc)
-            theta += offset
-    for j in range(K):
-        mu = mixture.mu[j]
-        sigma = np.sqrt(mixture.var[j])
-        circle = Circle(mu, sigma, color=color[j], fill=False)
-        ax.add_patch(circle)
-        legend = "mu = ({:0.2f}, {:0.2f})\n stdv = {:0.2f}".format(
-            mu[0], mu[1], sigma)
-        ax.text(mu[0], mu[1], legend)
-    plt.axis('equal')
-    plt.show()
-
 
 def rmse(X, Y):
     return np.sqrt(np.mean((X - Y)**2))
