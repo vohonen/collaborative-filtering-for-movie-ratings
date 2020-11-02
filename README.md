@@ -3,9 +3,9 @@ This is a homework from the MIT's massive open online course (MOOC) [Machine Lea
 
 Background for unsupervised learning concepts can be found quite easily by Googling or hopping straight into Wikipedia, but the author would suggest glancing the included lecture notes he took summarising the lecture material. The notes cover specifically information needed to understand the problem at hand. 
 
-Run the code/main.py to see the results. The [RMSE](https://en.wikipedia.org/wiki/Root-mean-square_deviation) was a little under 0.5, i.e. an OK performance when working with a ratings scale of 1-5. Stability was a common issue for everyone completing this homework. Most of the computations are made in log space and there might be warnings about division near zero. Numpy broadcasting is also used almost everywhere for speed, otherwise the algorithm convergence would take ages (current runtime for five initialisations around 2 seconds with K=1 and two minute with K=12). 
+Run the code/main.py to see the results. The [RMSE](https://en.wikipedia.org/wiki/Root-mean-square_deviation) was a little under 0.5 with 12 user types, an OK performance when working with a ratings scale of 1-5. Stability was a common issue for everyone completing this homework. Most of the computations are made in log space and there might be warnings about division near zero. Numpy broadcasting is also used almost everywhere for speed, otherwise the algorithm convergence would take ages (current runtime for five initialisations around 2 seconds with K=1 and two minute with K=12). 
 
-Unit testing was done against exercises in the Edx platform. 
+Unit testing was done against exercise grader in the course platform. 
 
 ***
 
