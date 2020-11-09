@@ -1,5 +1,5 @@
 # Collaborative filtering for Netflix movie ratings
-This is a homework from the MIT's massive open online course (MOOC) [Machine Learning with Python](https://www.edx.org/course/machine-learning-with-python-from-linear-models-to). The idea was to build a mixture model almost from scratch to predict Netflix movie ratings from a sparse data matrix using a Gaussian distribution. 
+This is a homework from the MIT's massive open online course (MOOC) [Machine Learning with Python](https://www.edx.org/course/machine-learning-with-python-from-linear-models-to). The idea was to build a mixture model almost from scratch to predict Netflix movie ratings from a large (1200x120) sparse data matrix using a Gaussian distribution. 
 
 Background for unsupervised learning concepts can be found quite easily by Googling or hopping straight into Wikipedia, but the author would suggest glancing the included lecture notes he took summarising the lecture material. The notes cover specifically information needed to understand the problem at hand. 
 
